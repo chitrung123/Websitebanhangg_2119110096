@@ -1,0 +1,263 @@
+﻿<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="cache-control" content="max-age=604800" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="description" content="Bootstrap e-commerce html template similar to Alibaba">
+    <meta name="keywords" content="Online template, shop, theme, template, html, css, bootstrap 4">
+
+    <title>Website title - Nguyễn Chí Trung template</title>
+
+    <link href="~/Content/css/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+    <!-- jQuery -->
+    <script src="~/Scripts/js/jquery-2.0.0.min.js" type="text/javascript"></script>
+
+    <!-- Bootstrap4 files-->
+    <script src="~/Scripts/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <link href="~/Content/css/bootstrap.css" rel="stylesheet" type="text/css" />
+
+    <!-- Font awesome 5 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" type="text/css" rel="stylesheet">
+
+    <!-- custom style -->
+    <link href="~/Content/css/ui.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/css/responsive.css" rel="stylesheet" type="text/css" />
+
+    <!-- custom javascript -->
+    <script src="~/Scripts/js/script.js" type="text/javascript"></script>
+   
+</head>
+<body>
+
+    <header class="section-header">
+        <section class="header-main border-bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-2 col-lg-3 col-md-12">
+                        <a href="https://localhost:44396/" class="brand-wrap">
+                            <img class="logo" src="~/Content/images/ori_3684404_cp5yea4dnsqz8vuix77ljgbfa43d0bwxuxitnlvn_ct-monogram-logo-design.jpg">
+                        </a> <!-- brand-wrap.// -->
+                    </div>
+                    <div class="col-xl-6 col-lg-5 col-md-6">
+                        <form action="#" class="search-header">
+                            <div class="input-group w-100">
+                                <select class="custom-select border-right" name="category_name">
+                                    <option value="">Tất cả các loại</option>
+                                    <option value="codex">Đặc biệt</option>
+                                    <option value="comments">Chỉ tốt nhất</option>
+                                    <option value="content">Đặt</option>
+                                </select>
+                                <input type="text" class="form-control" placeholder="Search">
+
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary" type="submit">
+                                        <i class="fa fa-search"></i> Tìm Kiếm
+                                    </button>
+                                </div>
+                            </div>
+                        </form> <!-- search-wrap .end// -->
+                    </div> <!-- col.// -->
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+                        <div class="widgets-wrap float-md-right">
+                            <div class="widget-header mr-3">
+                                <a href="#" class="widget-view">
+                                    <div class="icon-area">
+                                        <i class="fa fa-user"></i>
+                                        <span class="notify">3</span>
+                                    </div>
+                                    @if (Session["idUser"] != null)
+                                    {
+                                        <a href="https://localhost:44396/Admin/Home/Index">Trang Admin</a>
+                                        <a href="https://localhost:44396/Home/Login">Đăng xuất</a>
+                                    }
+                                    else
+                                    {
+                                        <a href="~/Home/Login">Đăng nhập</a>
+                                         <a href="~/Home/Register">Đăng kí</a>
+                                    }
+                                    @* <small class="text"> My profile </small>*@
+                                </a>
+                            </div>
+                           
+                            <div class="widget-header mr-3">
+                                <a href="https://localhost:44396/Payment" class="widget-view">
+                                    <div class="icon-area">
+                                        <i class="fa fa-store"></i>
+                                    </div>
+                                    <small class="text"> Thanh toán </small>
+                                </a>
+                            </div>
+                            <div class="widget-header">
+                                <a href="https://localhost:44396/ShopingCart/Detail" class="widget-view">
+                                    <div class="icon-area">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span class="notify" id="CartCount">@Session["count"]</span>
+                                    </div>
+                                    <small class="text"> Giỏ hàng </small>
+                                </a>
+                            </div>
+                        </div> <!-- widgets-wrap.// -->
+                    </div> <!-- col.// -->
+                </div> <!-- row.// -->
+            </div> <!-- container.// -->
+        </section> <!-- header-main .// -->
+
+
+
+        <nav class="navbar navbar-main navbar-expand-lg border-bottom">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav" aria-controls="main_nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="main_nav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"> <i class="fa fa-bars text-muted mr-2"></i> Trang demo </a>
+                            <div class="dropdown-menu dropdown-large">
+                                <nav class="row">
+                                    <div class="col-6">
+                                        <a href="page-index-1.html">Trang chủ 1</a>
+                                        <a href="page-index-2.html">Trang chủ  2</a>
+                                        <a href="page-category.html">Tất cả danh mục</a>
+                                        <a href="page-listing-large.html">Danh sách niêm yết</a>
+                                        <a href="page-listing-grid.html">Lưới danh sách</a>
+                                        <a href="page-shopping-cart.html">Giỏ hàng</a>
+                                        <a href="page-detail-product.html">Chi tiết sản phẩm</a>
+                                        <a href="page-content.html">Nội dung trang</a>
+                                        <a href="page-user-login.html">Đăng nhập trang</a>
+                                        <a href="page-user-register.html">Đăng ký trang</a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a href="page-profile-main.html">Hồ sơ chính</a>
+                                        <a href="page-profile-orders.html">Hồ sơ đơn đặt hàng</a>
+                                        <a href="page-profile-seller.html">Hồ sơ người bán</a>
+                                        <a href="page-profile-wishlist.html">Danh sách yêu thích hồ sơ</a>
+                                        <a href="page-profile-setting.html">Cài đặt hồ sơ</a>
+                                        <a href="page-profile-address.html">Địa chỉ hồ sơ</a>
+                                        <a href="rtl-page-index-1.html">Trang chủ RTL</a>
+                                        <a href="page-components.html" target="_blank">Các thành phần khác</a>
+                                    </div>
+                                </nav> <!--  row end .// -->
+                            </div> <!--  dropdown-menu dropdown-large end.// -->
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://localhost:44396/Category/Index">Tất cả sản phẩm</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Triển lãm thương mại</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Dịch vụ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Bán hàng cùng chúng tôi</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-md-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Tải ứng dụng</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="http://example.com" data-toggle="dropdown">English</a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="#">Russian</a>
+                                <a class="dropdown-item" href="#">French</a>
+                                <a class="dropdown-item" href="#">Spanish</a>
+                                <a class="dropdown-item" href="#">Chinese</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div> <!-- collapse .// -->
+            </div> <!-- container .// -->
+        </nav>
+
+    </header> <!-- section-header.// -->
+
+
+    @RenderBody();
+
+    <b class="screen-overlay"></b>
+    <footer class="section-footer bg-secondary">
+        <div class="container">
+            <section class="footer-top padding-y-lg text-white">
+                <div class="row">
+                    <aside class="col-md col-6">
+                        <h6 class="title">Thương hiệu</h6>
+                        <ul class="list-unstyled">
+                            <li> <a href="#">Apple</a></li>
+                            <li> <a href="#">Samsung</a></li>
+                            <li> <a href="#">Realmi</a></li>
+                            <li> <a href="#">Xiaomi</a></li>
+                        </ul>
+                    </aside>
+                    <aside class="col-md col-6">
+                        <h6 class="title">Công ty</h6>
+                        <ul class="list-unstyled">
+                            <li> <a href="#">Thông tin thêm</a></li>
+                            <li> <a href="#">Nghề nghiệp</a></li>
+                            <li> <a href="#">Tìm cửa hàng</a></li>
+                            <li> <a href="#">Quy tắc và điều khoản</a></li>
+                            <li> <a href="#">Sơ đồ trang web</a></li>
+                        </ul>
+                    </aside>
+                    <aside class="col-md col-6">
+                        <h6 class="title">Trợ giúp</h6>
+                        <ul class="list-unstyled">
+                            <li> <a href="#">Liên hệ với chúng tôi</a></li>
+                            <li> <a href="#">Hoàn tiền</a></li>
+                            <li> <a href="#">Trạng thái đơn hàng</a></li>
+                            <li> <a href="#">Thông tin vận chuyển</a></li>
+                            <li> <a href="#">Tranh chấp mở</a></li>
+                        </ul>
+                    </aside>
+                    <aside class="col-md col-6">
+                        <h6 class="title">Tài khoản</h6>
+                        <ul class="list-unstyled">
+                            <li> <a href="#"> Đăng nhập người dùng </a></li>
+                            <li> <a href="#"> Đăng ký người dùng </a></li>
+                            <li> <a href="#"> Cài đặt tài khoản </a></li>
+                            <li> <a href="#"> Đơn đặt hàng của tôi </a></li>
+                        </ul>
+                    </aside>
+                    <aside class="col-md">
+                        <h6 class="title">Mạng Xã hội</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#"> <i class="fab fa-facebook"></i> Facebook </a></li>
+                            <li><a href="#"> <i class="fab fa-twitter"></i> Twitter </a></li>
+                            <li><a href="#"> <i class="fab fa-instagram"></i> Instagram </a></li>
+                            <li><a href="#"> <i class="fab fa-youtube"></i> Youtube </a></li>
+                        </ul>
+                    </aside>
+                </div> <!-- row.// -->
+            </section>	<!-- footer-top.// -->
+
+            <section class="footer-bottom text-center">
+
+                <p class="text-white">
+                    Chính sách bảo mật - Điều khoản sử dụng - Hướng dẫn yêu cầu pháp lý về thông tin người dùng
+                </p>
+                <p class="text-muted"> Công ty thuộc sở hữu của Nguyễn Chí Trung </p>
+                <br>
+            </section>
+        </div><!-- //container -->
+    </footer>
+    <!-- ========================= FOOTER END // ========================= -->
+    <script>
+        var priceEle = document.querySelector(".price__detail--format")
+        var priceEle2 = document.querySelector(".price__detail2--format")
+        if (priceEle && priceEle2) {
+            priceEle.textContent = Number(priceEle.textContent).toLocaleString('it-IT', { style: 'currency', currency: 'VND' })
+            priceEle2.textContent = Number(priceEle2.textContent).toLocaleString('it-IT', { style: 'currency', currency: 'VND' })
+        }
+       
+
+    </script>
+
+
+</body>
+</html>
